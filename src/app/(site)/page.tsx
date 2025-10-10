@@ -1,6 +1,6 @@
 import Image from "next/image";
-import BookingWidget from "@/components/BookingWidget/bookingWidget";
-import Card from "@/components/Card/card";
+import BookingWidget from "./components/BookingWidget/bookingWidget";
+import Card from "./components/Card/card";
 
 export default function Home() {
   return (

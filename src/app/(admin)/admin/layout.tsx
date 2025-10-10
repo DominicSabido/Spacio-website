@@ -1,11 +1,15 @@
 // Minimal admin layout: no Header or Footer
-import "../globals.css";
+import "../../../(site)/globals.css";
 import type { ReactNode } from "react";
+import Header from "./AdminHeader/Header";
 
 export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        </body>
     </html>
   );
 }
