@@ -1,11 +1,14 @@
 import Image from "next/image";
+import { FaUser } from 'react-icons/fa';
+
 
 const Header = () => {
-  return <header className="container  mx-auto text-xl flex flex-wrap md:flex-nowrap">
-    <div className="bg-black text-white flex items-center w-full md:2/3">
-      <Image src="/spacio_logo.jpg" alt="Spacio Logo" width={180} height={50} className="mr-5"/>
-      
-    </div>
+  return <header className="bg-darkGray ">
+    <ul className="flex justify-between w-full items-center">
+      <li><Image src="/spacio_logo.jpg" alt="Spacio Logo" width={100} height={50} /></li>
+      <li className="mx-10 flex justify-center items-center"><FaUser className="text-4xl" /><h1 >Current User</h1></li>    
+    </ul>
+    
   </header>;
 }
 
