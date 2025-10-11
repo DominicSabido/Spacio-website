@@ -1,5 +1,4 @@
-// Minimal admin layout: no Header or Footer
-import "../../../(site)/globals.css";
+import "../../../app/globals.css";
 import type { ReactNode } from "react";
 import Header from "./AdminHeader/Header";
 
