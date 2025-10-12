@@ -1,7 +1,7 @@
 import "../../../app/globals.css";
 import type { ReactNode } from "react";
-import Header from "./AdminHeader/Header";
-import AdminNavbar from "./AdminNavbar/Navbar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "./components/app-sidebar"
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -14,9 +14,13 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${roboto.className}bg-white`}>
-        <Header />
-        <AdminNavbar />
+      <SidebarProvider>
+      <AppSidebar />
+      <main>
+        <SidebarTrigger />
         {children}
+      </main>
+    </SidebarProvider>
         
         </body>
     </html>
