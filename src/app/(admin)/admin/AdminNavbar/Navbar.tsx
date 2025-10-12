@@ -5,8 +5,8 @@ const AdminNavbar = () => {
     <ul className="flex flex-col justify-around p-5 text-xl h-full">
       <li className="hover:text-white hover:underline cursor-pointer">Dashboard</li>
       <li className="hover:text-white hover:underline cursor-pointer">Customers</li>
-      <li className="hover:text-white hover:underline cursor-pointer">Quotes</li>
-      <li className="hover:text-white hover:underline cursor-pointer">Invoices</li>
+      <li className="hover:text-white hover:underline cursor-pointer">Reservations</li>
+      <li className="hover:text-white hover:underline cursor-pointer">Quotes and Invoices </li>
       <li className="hover:text-white hover:underline cursor-pointer">Packages</li>
     </ul>
   </nav>
