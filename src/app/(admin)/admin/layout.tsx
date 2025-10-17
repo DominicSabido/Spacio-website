@@ -1,7 +1,7 @@
 import "../../../app/globals.css";
 import type { ReactNode } from "react";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "./components/app-sidebar"
+import { AppSidebar } from "./components/Sidebar/adminSidebar"
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
