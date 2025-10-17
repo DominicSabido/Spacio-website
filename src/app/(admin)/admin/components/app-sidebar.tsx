@@ -1,10 +1,12 @@
 import Image from "next/image";
-import { ReceiptText, Contact, CalendarDays, TicketPercent, Settings, User2, ChevronUp,} from "lucide-react"
+import { FileText, Users, Calendar, Settings, User2, ChevronUp, Package, UserPlus, LogOut} from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator
 
 } from "@/components/ui/dropdown-menu"
 
@@ -26,22 +28,22 @@ const items = [
   {
     title: "Customers",
     url: "#",
-    icon: Contact,
+    icon: Users,
   },
   {
     title: "Reservations",
     url: "#",
-    icon: CalendarDays,
+    icon: Calendar,
   },
   {
     title: "Quotes and Invoices",
     url: "#",
-    icon: ReceiptText,
+    icon: FileText,
   },
   {
     title: "Packages",
     url: "#",
-    icon: TicketPercent
+    icon: Package,
   },
   {
     title: "User Settings",
@@ -86,30 +88,38 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
+     <SidebarFooter>
         <SidebarMenu>
-            <SidebarMenuItem>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <SidebarMenuButton>
-                    <User2 /> Username
-                    <ChevronUp className="ml-auto" />
-                  </SidebarMenuButton>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  side="top"
-                  className="w-[--radix-popper-anchor-width]"
-                >
-                  <DropdownMenuItem>
-                    <span>Sign in to another account</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <span>Sign out</span>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </SidebarMenuItem>
-          </SidebarMenu>
+          <SidebarMenuItem>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="w-full">
+                <div className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-left hover:bg-accent hover:text-accent-foreground">
+                  <div className="flex flex-1 flex-col items-start">
+                    <span className="truncate">Admin User</span>
+                    <span className="truncate text-muted-foreground">admin@example.com</span>
+                  </div>
+                  <ChevronUp className="ml-auto h-4 w-4" />
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                side="top"
+                align="end"
+                className="w-56"
+              >
+                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <UserPlus className="mr-2 h-4 w-4" />
+                  <span>Sign in to another account</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <LogOut className="mr-2 h-4 w-4" />
+                  <span>Log out</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
   )
