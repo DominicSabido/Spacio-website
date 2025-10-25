@@ -16,7 +16,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
       <body className={`${roboto.className}bg-white`}>
       <SidebarProvider>
       <AppSidebar />
-      <main>
+      <main className="w-full h-full">
         <SidebarTrigger />
         {children}
       </main>
